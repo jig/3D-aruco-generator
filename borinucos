@@ -2,7 +2,8 @@
 # Generate the 50 "borinucos" (ArUco markers for Borinots) into a folder,
 # as STL and as sliced G-code for a Prusa MK3S (PETG, with a color change).
 # Box side depends on marker ID:
-#   0..20  -> 100 mm
+#   0..1   -> 200 mm
+#   2..20  -> 100 mm
 #   21..30 ->  40 mm
 #   31..40 -> 180 mm
 #   41..49 -> 210 mm (full MK3S bed depth, printed without skirt)
@@ -28,7 +29,8 @@ COLOR_CHANGE_Z=$(awk -v t="$BOX_THICKNESS" -v g="$GROOVE_DEPTH" 'BEGIN { print t
 mkdir -p "$OUT_DIR"
 
 for ID in $(seq 0 49); do
-    if   (( ID <= 20 )); then SIDE=100
+    if   (( ID <= 1 ));  then SIDE=200
+    elif (( ID <= 20 )); then SIDE=100
     elif (( ID <= 30 )); then SIDE=40
     elif (( ID <= 40 )); then SIDE=180
     else                      SIDE=210

@@ -16,7 +16,8 @@ changes with the marker ID.
 
 | IDs    | Box side | Margin | Marker side (black border, outer edge) | Cell size |
 |--------|----------|--------|----------------------------------------|-----------|
-| 0..20  | 100 mm   | 10 mm  | 80 mm                                  | 10 mm     |
+| 0..1   | 200 mm   | 20 mm  | 160 mm                                 | 20 mm     |
+| 2..20  | 100 mm   | 10 mm  | 80 mm                                  | 10 mm     |
 | 21..30 | 40 mm    | 4 mm   | 32 mm                                  | 4 mm      |
 | 31..40 | 180 mm   | 18 mm  | 144 mm                                 | 18 mm     |
 | 41..49 | 210 mm   | 21 mm  | 168 mm                                 | 21 mm     |
