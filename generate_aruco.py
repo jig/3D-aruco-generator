@@ -279,8 +279,7 @@ def main():
     aruco_extrusion = aruco_extrusion.pushPoints(extrusion_points).rect(square_side,square_side).extrude(card_height-groove_depth)
 
     # Add a base under the aruco marker
-    base = cq.Workplane('XY').rect(card_side, card_side).extrude(groove_depth)
-    base = base.rect(card_side, card_side).extrude(-card_height+groove_depth)
+    base = cq.Workplane('XY').workplane(offset=groove_depth-card_height).rect(card_side, card_side).extrude(card_height)
 
     # Subtract the aruco marker from the base
     obj = base.cut(aruco_extrusion)
