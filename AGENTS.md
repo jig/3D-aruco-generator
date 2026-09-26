@@ -18,7 +18,11 @@ changes with the marker ID.
 |--------|----------|--------|----------------------------------------|-----------|
 | 0..20  | 100 mm   | 10 mm  | 80 mm                                  | 10 mm     |
 | 21..30 | 40 mm    | 4 mm   | 32 mm                                  | 4 mm      |
-| 31..49 | 170 mm   | 17 mm  | 136 mm                                 | 17 mm     |
+| 31..40 | 180 mm   | 18 mm  | 144 mm                                 | 18 mm     |
+| 41..49 | 210 mm   | 21 mm  | 168 mm                                 | 21 mm     |
+
+210 mm is the MK3S bed depth (250x210 mm), so IDs 41..49 are sliced
+without a skirt.
 
 For pose estimation (e.g. OpenCV `estimatePoseSingleMarkers` /
 `solvePnP`), the marker length to use is the **marker side** column
