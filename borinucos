@@ -5,8 +5,8 @@
 #   0..1   -> 200 mm
 #   2..20  -> 100 mm
 #   21..30 ->  40 mm
-#   31..40 -> 180 mm
-#   41..49 -> 210 mm (full MK3S bed depth, printed without skirt)
+#   31..34 -> 180 mm
+#   35..49 -> 210 mm (full MK3S bed depth, printed without skirt)
 # Margin is 10% of the box side (10 mm for a 100 mm box).
 # Usage: ./borinucos [output_dir]   (default: borinucos_out)
 set -euo pipefail
@@ -32,7 +32,7 @@ for ID in $(seq 0 49); do
     if   (( ID <= 1 ));  then SIDE=200
     elif (( ID <= 20 )); then SIDE=100
     elif (( ID <= 30 )); then SIDE=40
-    elif (( ID <= 40 )); then SIDE=180
+    elif (( ID <= 34 )); then SIDE=180
     else                      SIDE=210
     fi
     # A 210 mm box fills the bed depth: no room for the skirt.

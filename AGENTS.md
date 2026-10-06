@@ -19,10 +19,10 @@ changes with the marker ID.
 | 0..1   | 200 mm   | 20 mm  | 160 mm                                 | 20 mm     |
 | 2..20  | 100 mm   | 10 mm  | 80 mm                                  | 10 mm     |
 | 21..30 | 40 mm    | 4 mm   | 32 mm                                  | 4 mm      |
-| 31..40 | 180 mm   | 18 mm  | 144 mm                                 | 18 mm     |
-| 41..49 | 210 mm   | 21 mm  | 168 mm                                 | 21 mm     |
+| 31..34 | 180 mm   | 18 mm  | 144 mm                                 | 18 mm     |
+| 35..49 | 210 mm   | 21 mm  | 168 mm                                 | 21 mm     |
 
-210 mm is the MK3S bed depth (250x210 mm), so IDs 41..49 are sliced
+210 mm is the MK3S bed depth (250x210 mm), so IDs 35..49 are sliced
 without a skirt.
 
 For pose estimation (e.g. OpenCV `estimatePoseSingleMarkers` /
